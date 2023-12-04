@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  diagnostics_explorer:
+    image: ohdsi/uvetis_safety:1.0.0
+    build:
+      context: .
+      args:
+        APP_NAME: uvetis_safety
+    ports:
+      - "3838:3838"
