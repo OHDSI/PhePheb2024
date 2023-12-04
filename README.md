@@ -1,11 +1,9 @@
-# Uvetis Safety indications diagnostics explorer
+# Uvetis Safety study diagnostics explorer
 
 Study description: TODO.
 
 Please visit the live shiny apps:
-(Indications)[https://results.ohdsi.org/app/15_UveitisSafetyIndications] 
-(Outcomes)[https://results.ohdsi.org/app/14_UveitisSafetyOutcomes]
-
+[Indications](https://results.ohdsi.org/app/15_UveitisSafetyIndications) and [Outcomes](https://results.ohdsi.org/app/14_UveitisSafetyOutcomes)
 
 All data is publicly available in this repository in the sqlite files [indications.sqlite](indications.sqlite) and
 [outcomes.sqlite](outcomes.sqlite).
