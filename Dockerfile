@@ -7,19 +7,12 @@ ARG APP_NAME
 ARG GIT_BRANCH=unknown
 ARG GIT_COMMIT_ID_ABBREV=unknown
 
-ENV APP_DIR=/srv/shiny-server/outcomes
-
 # Set workdir and copy app files
 WORKDIR /srv/shiny-server/
 
-RUN mkdir data/
+COPY global.R ./
+COPY *.config.yml ./
 
-RUN cp server.R ./
-RUN cp ui.R ./
-RUN cp global.R ./
-RUN cp config.yml ./
-
-COPY *.sqlite ./data/
 # Expose default Shiny app port
 EXPOSE 3838
 # Run the Shiny app

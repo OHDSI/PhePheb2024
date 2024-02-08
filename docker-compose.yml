@@ -6,5 +6,9 @@ services:
       context: .
       args:
         APP_NAME: phepheb2024
+    environment:
+      - APP_CONFIG_PATH=alzh.config.yml
+    env_file:
+      - .environ
     ports:
       - "3838:3838"
