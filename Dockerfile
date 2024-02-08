@@ -11,7 +11,7 @@ ARG GIT_COMMIT_ID_ABBREV=unknown
 WORKDIR /srv/shiny-server/
 
 COPY global.R ./
-COPY *.config.yml ./
+COPY alzh.config.yml ./config.yml
 
 # Expose default Shiny app port
 EXPOSE 3838
