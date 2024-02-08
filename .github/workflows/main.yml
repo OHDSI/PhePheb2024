@@ -9,7 +9,7 @@ env:
   DOCKER_IMAGE: ohdsi/phepheb2024
   MAINTAINER: Jamie Gilbert <gilbert@ohdsi.org>
   AUTHOR: Jamie Gilbert <gilbert@ohdsi.org>
-  APP_NAME: uvetis_safety
+  APP_NAME: phepheb
 jobs:
   docker:
     runs-on: ubuntu-latest
