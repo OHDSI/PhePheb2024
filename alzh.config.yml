@@ -22,3 +22,4 @@ tablePrefix: "alz2024_"
 cohortTableName: "cohort"
 databaseTableName: "database"
 resultsDatabaseSchema: "phenotype_phebruary"
+vocabularyDatabaseSchemas: ["phenotype_phebruary"]
