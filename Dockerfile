@@ -12,8 +12,7 @@ ENV CONFIG_FILE=config.yml
 WORKDIR /srv/shiny-server/
 
 COPY global.R ./
-COPY alzh.config.yml ./
-COPY mdd.config.yml  ./
+COPY *.config.yml ./
 COPY start.sh /start.sh
 RUN chmod +x /start.sh
 
