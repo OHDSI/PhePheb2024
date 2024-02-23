@@ -7,7 +7,7 @@ services:
       args:
         APP_NAME: phepheb2024
     environment:
-      - APP_CONFIG_PATH=alzh.config.yml
+      - CONFIG_FILE=mdd.config.yml
     env_file:
       - .environ
     ports:
