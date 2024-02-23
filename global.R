@@ -97,7 +97,7 @@ if (packageVersion("OhdsiShinyModules") >= as.numeric_version("1.2.0")) {
     cgTable = shinySettings$cohortTableName,
     databaseTable = shinySettings$databaseTableName
   )
-
+  print(paste("*****", shinySettings$tablePrefix, "!!!!!!"))
   dataSource <-
     OhdsiShinyModules::createCdDatabaseDataSource(connectionHandler = connectionHandler,
                                                   resultDatabaseSettings = resultDatabaseSettings)
