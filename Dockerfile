@@ -6,15 +6,18 @@ ARG APP_NAME
 # Set arguments for the GitHub branch and commit id abbreviation
 ARG GIT_BRANCH=unknown
 ARG GIT_COMMIT_ID_ABBREV=unknown
+ENV CONFIG_FILE=config.yml
 
 # Set workdir and copy app files
 WORKDIR /srv/shiny-server/
 
 COPY global.R ./
-COPY alzh.config.yml ./config.yml
+COPY alzh.config.yml ./
 COPY mdd.config.yml  ./
+COPY start.sh /start.sh
+RUN chmod +x /start.sh
 
 # Expose default Shiny app port
 EXPOSE 3838
 # Run the Shiny app
-CMD R -e "shiny::runApp('/srv/shiny-server/', host = '0.0.0.0', port = 3838)"
+CMD ["/start.sh"]
