@@ -12,6 +12,7 @@ WORKDIR /srv/shiny-server/
 
 COPY global.R ./
 COPY alzh.config.yml ./config.yml
+COPY mdd.config.yml  ./
 
 # Expose default Shiny app port
 EXPOSE 3838
