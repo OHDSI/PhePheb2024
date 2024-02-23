@@ -88,6 +88,8 @@ writeLines("Initalizing connection...")
 connectionHandler <- ResultModelManager::PooledConnectionHandler$new(shinySettings$connectionDetails)
 writeLines("Database connection established")
 
+shinySettings$tablePrefix <- Sys.getenv("TABLE_PREFIX", unset = "")
+
 if (packageVersion("OhdsiShinyModules") >= as.numeric_version("1.2.0")) {
   writeLines("Loading ohdsi shiny data source")
   resultDatabaseSettings <- list(
